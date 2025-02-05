@@ -5,11 +5,64 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
+    <Button
+        android:id="@+id/scanButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Main Fragment"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:layout_marginTop="10dp"
+        android:text="Scan for Paired Devices" />
+
+    <ListView
+        android:id="@+id/deviceListView"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect to Device"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/startServerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Server"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/messageInput"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="10dp"
+        android:hint="Type message..." />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Message"
+        android:layout_marginTop="10dp" />
+
+    <!-- New TextView for displaying received messages -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/messageDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="Message Log:"
+            android:minHeight="200dp" />
+    </ScrollView>
 </LinearLayout>
